@@ -12,10 +12,13 @@ class App extends React.Component{
       installMode: codePush.InstallMode.IMMEDIATE
     });
   }
-  
+
   render(){
     return (
+      <>
       <Text>Hello</Text>
+      <Text>Codepush Checking</Text>
+      </>
     );
   }
 }
