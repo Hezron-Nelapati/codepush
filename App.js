@@ -3,7 +3,7 @@ import CodePush from 'react-native-code-push';
 import {Text} from 'react-native';
 
 let codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME };
-codePush.sync({
+CodePush.sync({
 updateDialog: true,
 installMode: codePush.InstallMode.IMMEDIATE
 });
