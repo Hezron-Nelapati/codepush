@@ -2,15 +2,16 @@ import React from 'react';
 import codePush from 'react-native-code-push';
 import {Text} from 'react-native';
 
-let codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME };
+let codePushOptions = { 
+      checkFrequency: codePush.CheckFrequency.ON_APP_START,
+      updateDialog: true,
+      installMode: codePush.InstallMode.IMMEDIATE 
+    };
 
 class App extends React.Component{
   
   componentDidMount(){
-    codePush.sync({
-      updateDialog: true,
-      installMode: codePush.InstallMode.IMMEDIATE
-    });
+    codePush.sync(codePushOptions);
   }
 
   render(){
